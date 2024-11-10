@@ -49,15 +49,13 @@ class LibraryMember:
         else:
             print(f"{self.name} has no borrowed books.")
 
-# Example interactive code to demonstrate borrowing and returning books
 
-# Create sample books
-book1 = Book("1984", "George Orwell")
-book2 = Book("To Kill a Mockingbird", "Harper Lee")
-book3 = Book("The Great Gatsby", "F. Scott Fitzgerald")
+book1 = Book("The Prince", "Nora Roberts")
+book2 = Book("The Wife Between Us", "Sarah Pekkanen")
+book3 = Book("Kigogo", "Pauline Kea")
 
 # Create a library member
-member = LibraryMember("Alice", "LM001")
+member = LibraryMember("Lorna", "L001")
 
 # Borrow and return process
 print("---- Library Management System ----")
