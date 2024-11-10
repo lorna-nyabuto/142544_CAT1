@@ -47,15 +47,11 @@ class Instructor:
         else:
             print("No students enrolled in this course.")
 
-
-# Example interactive code to demonstrate adding students and assigning grades
-
-# Create an instructor and course
-instructor = Instructor("Dr. Smith", "Intro to Python")
+instructor = Instructor("Dr. Sam", "Python Course")
 
 # Create sample students
-student1 = Student("Alice", "S001")
-student2 = Student("Bob", "S002")
+student1 = Student("Lorna", "L001")
+student2 = Student("Nicole", "N002")
 
 # Adding students to the course
 print("---- Course Management System ----")
