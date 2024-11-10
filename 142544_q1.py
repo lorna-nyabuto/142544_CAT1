@@ -5,11 +5,9 @@ class Book:
         self.is_borrowed = False
     
     def mark_as_borrowed(self):
-        """Marks the book as borrowed."""
         self.is_borrowed = True
     
     def mark_as_returned(self):
-        """Marks the book as returned."""
         self.is_borrowed = False
     
     def __str__(self):
@@ -23,7 +21,6 @@ class LibraryMember:
         self.borrowed_books = []
     
     def borrow_book(self, book):
-        """Allows the member to borrow a book if it is available."""
         if not book.is_borrowed:
             book.mark_as_borrowed()
             self.borrowed_books.append(book)
@@ -32,7 +29,6 @@ class LibraryMember:
             print(f"Sorry, '{book.title}' is currently borrowed by someone else.")
     
     def return_book(self, book):
-        """Allows the member to return a book if they have borrowed it."""
         if book in self.borrowed_books:
             book.mark_as_returned()
             self.borrowed_books.remove(book)
@@ -41,7 +37,6 @@ class LibraryMember:
             print(f"{self.name} does not have '{book.title}' borrowed.")
     
     def list_borrowed_books(self):
-        """Lists all books currently borrowed by the member."""
         if self.borrowed_books:
             print(f"{self.name} has borrowed the following books:")
             for book in self.borrowed_books:
@@ -54,20 +49,16 @@ book1 = Book("The Prince", "Nora Roberts")
 book2 = Book("The Wife Between Us", "Sarah Pekkanen")
 book3 = Book("Kigogo", "Pauline Kea")
 
-# Create a library member
 member = LibraryMember("Lorna", "L001")
 
-# Borrow and return process
 print("---- Library Management System ----")
 member.borrow_book(book1)
 member.borrow_book(book2)
 member.list_borrowed_books()
 
-# Returning a book
 member.return_book(book1)
 member.list_borrowed_books()
 
-# Trying to borrow a book that is already borrowed by someone else
 member.borrow_book(book1)
 member.borrow_book(book3)
 
